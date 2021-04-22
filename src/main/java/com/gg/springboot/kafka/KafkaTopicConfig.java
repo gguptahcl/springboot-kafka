@@ -19,10 +19,11 @@ public class KafkaTopicConfig {
     @Value(value = "${message.topic.name}")
     private String topicName;
 
-    /*
+    
     @Value(value = "${partitioned.topic.name}")
     private String partitionedTopicName;
 
+    /*
     @Value(value = "${filtered.topic.name}")
     private String filteredTopicName;
 
@@ -43,13 +44,14 @@ public class KafkaTopicConfig {
         return new NewTopic(topicName, 1, (short) 1);
     }
 
-    /*
+   
     @Bean
     public NewTopic topic2() {
     	System.out.println("Crearng new topic Topic2");
         return new NewTopic(partitionedTopicName, 6, (short) 1);
     }
 
+    /*
     @Bean
     public NewTopic topic3() {
     	System.out.println("Crearng new topic Topic3");
