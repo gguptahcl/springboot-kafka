@@ -59,7 +59,7 @@ public class SpringbootKafkaApplication {
         
         // commented by Gaurav Start
        
-        producer.sendMessageToFiltered("Hello Baeldung!");
+        producer.sendMessageToFiltered("Hello GG!");
         producer.sendMessageToFiltered("Hello World!");
        /* listener.filterLatch.await(10, TimeUnit.SECONDS);
         */

@@ -58,7 +58,7 @@ public class MessageProducer {
 
    
     public void sendMessageToPartition(String message, int partition) {
-        kafkaTemplate.send(partitionedTopicName, partition, null, message);
+    	kafkaTemplate.send(partitionedTopicName, partition, null, message);
     }
     
   
