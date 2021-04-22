@@ -23,13 +23,15 @@ public class MessageProducer {
     @Value(value = "${message.topic.name}")
     private String topicName;
 
-    /*
+ 
     @Value(value = "${partitioned.topic.name}")
     private String partitionedTopicName;
 
+   
     @Value(value = "${filtered.topic.name}")
     private String filteredTopicName;
 
+    /*
     @Value(value = "${greeting.topic.name}")
     private String greetingTopicName;
 	*/
@@ -54,15 +56,16 @@ public class MessageProducer {
         });
     }
 
-    /*
+   
     public void sendMessageToPartition(String message, int partition) {
         kafkaTemplate.send(partitionedTopicName, partition, null, message);
     }
-
+    
+  
     public void sendMessageToFiltered(String message) {
         kafkaTemplate.send(filteredTopicName, message);
     }
-
+    /*
     public void sendGreetingMessage(Greeting greeting) {
         greetingKafkaTemplate.send(greetingTopicName, greeting);
     }

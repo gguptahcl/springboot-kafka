@@ -47,16 +47,18 @@ public class KafkaConsumerConfig {
         return kafkaListenerContainerFactory("bar");
     }
 
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, String> partitionsKafkaListenerContainerFactory() {
+        return kafkaListenerContainerFactory("partitions");
+    }
+
+    
     /*
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, String> headersKafkaListenerContainerFactory() {
         return kafkaListenerContainerFactory("headers");
     }
 
-    @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String> partitionsKafkaListenerContainerFactory() {
-        return kafkaListenerContainerFactory("partitions");
-    }
     */
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, String> filterKafkaListenerContainerFactory() {

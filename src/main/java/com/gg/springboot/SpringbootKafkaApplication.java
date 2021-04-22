@@ -32,8 +32,9 @@ public class SpringbootKafkaApplication {
          */
         
         producer.sendMessage("Hello, World!");
-        listener.latch.await(10, TimeUnit.SECONDS);
-
+        // commented by Gaurav Start
+       // listener.latch.await(10, TimeUnit.SECONDS);
+        // commented by Gaurav End
         /*
          * Sending message to a topic with 5 partitions,
          * each message to a different partition. But as per
@@ -42,10 +43,10 @@ public class SpringbootKafkaApplication {
          */
   
    // commented by Gaurav Start     
-  /*    for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 5; i++) {
             producer.sendMessageToPartition("Hello To Partitioned Topic!", i);
         }
-        listener.partitionLatch.await(10, TimeUnit.SECONDS);
+      /*      listener.partitionLatch.await(10, TimeUnit.SECONDS);
 
 	*/
         // commented by Gaurav End
@@ -57,10 +58,10 @@ public class SpringbootKafkaApplication {
          */
         
         // commented by Gaurav Start
-        /*
+       
         producer.sendMessageToFiltered("Hello Baeldung!");
         producer.sendMessageToFiltered("Hello World!");
-        listener.filterLatch.await(10, TimeUnit.SECONDS);
+       /* listener.filterLatch.await(10, TimeUnit.SECONDS);
         */
         
         // commented by Gaurav End
@@ -75,8 +76,8 @@ public class SpringbootKafkaApplication {
         producer.sendGreetingMessage(new Greeting("Greetings", "World!"));
         listener.greetingLatch.await(10, TimeUnit.SECONDS);
 		*/
-     // commented by Gaurav End
-        context.close();
+       // commented by Gaurav End
+       context.close();
     }
 
     /*
